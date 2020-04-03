@@ -1,0 +1,148 @@
+.fit-example {
+  padding: 15px 0;
+  background-color: @backgound-gray;
+}
+
+.fit-example__container {
+  .container-mobile;
+}
+
+.fit-example__title {
+  margin: 0;
+  padding-bottom: 23px;
+  .font (36px, 60px, 400);
+}
+
+.fit-example__text {
+  width: 95%;
+  margin: 0;
+  padding-bottom: 25px;
+
+  font-family: Arial, sans-serif;
+  .font (14px, 18px, 400);
+
+}
+
+.fit-example__numbers {
+  display: flex;
+  justify-content: space-between;
+
+  text-align: center;
+}
+
+.fit-example__numbers-block {
+  position: relative;
+
+  width: 125px;
+  height: 58px;
+  margin: 0;
+  padding-top: 13px;
+
+  .font (24px, 24px, 400);
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 122px;
+    height: 54px;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 5%;
+  }
+}
+
+.fit-example__numbers-text--min {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: 60%;
+  padding: 0 5px;
+
+  font-family: Arial, sans-serif;
+  .font (12px, 12px, 400);
+  color: #444444;
+  text-transform: lowercase;
+
+  background-color: @backgound-gray;
+}
+
+.fit-example__numbers-text--end {
+  padding-top: 5px;
+  padding-bottom: 20px;
+
+  .font (14px, 20px, 400);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.fit-example__image {
+  .margin-center;
+}
+
+.fit-example__controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 62%;
+
+  .margin-center;
+  padding-top: 28px;
+  padding-bottom: 17px;
+}
+
+.fit-example__scale {
+  position: relative;
+
+  width: 82px;
+  height: 12px;
+  margin-top: 2px;
+
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.fit-example__scale-slider {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+
+  width: 35px;
+  height: 6px;
+
+  background-color: @green;
+  border-radius: 6px;
+}
+
+.fit-example__button {
+  padding: 0;
+  padding-bottom: 2px;
+
+  .font-family;
+  .font (16px, 20px, 400);
+  color: @big-font-color;
+  text-transform: uppercase;
+
+  border: none;
+  border-bottom: 1px dotted #bebebe;
+  background-color: unset;
+  outline: none;
+  cursor: pointer;
+}
+
+.fit-example__button:hover,
+.fit-example__button:focus {
+  border-bottom: 1px solid #989898;
+}
+
+.fit-example__button:active {
+  border: none;
+}
