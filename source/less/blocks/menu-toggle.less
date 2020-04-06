@@ -22,32 +22,29 @@
 
     background-color: rgba(034, 034, 034, 1);
     box-shadow: rgba(034, 034, 034, 1) 0 -6px 0 0,
-                rgba(034, 034, 034, 1) 0 6px 0 0;
+      rgba(034, 034, 034, 1) 0 6px 0 0;
   }
 }
 
 .menu-toggle:hover::before {
   background-color: rgba(034, 034, 034, 0.8);
   box-shadow: rgba(034, 034, 034, 0.8) 0 -6px 0 0,
-                rgba(034, 034, 034, 0.8) 0 6px 0 0;
+    rgba(034, 034, 034, 0.8) 0 6px 0 0;
 }
 
 .menu-toggle:active::before {
   background-color: rgba(034, 034, 034, 0.6);
   box-shadow: rgba(034, 034, 034, 0.6) 0 -6px 0 0,
-                rgba(034, 034, 034, 0.6) 0 6px 0 0;
+    rgba(034, 034, 034, 0.6) 0 6px 0 0;
 }
 
-.menu-toggle__icon {
+.menu-toggle__icon--cross {
+  position: absolute;
+  content: "";
+  right: 2px;
+  top: -227px;
 
-  &--cross {
-    position: absolute;
-    content: "";
-    right: 2px;
-    top: -227px;
-
-    border: 18px solid transparent;
-  }
+  border: 18px solid transparent;
 }
 
 .menu-toggle__text {
