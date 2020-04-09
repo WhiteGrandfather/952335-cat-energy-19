@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
   }
 
-  &:last-child::after {
+  &--fat::after {
     top: 35px;
     left: 13px;
 
@@ -124,4 +124,70 @@
 
 .fit-programs__item-link:active .fit-programs__link-text::before {
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .fit-programs__list {
+    padding-top: 0;
+  }
+
+  .fit-programs__item {
+    padding: 52px;
+    padding-right: 40%;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+
+    &--fat {
+      padding-right: 44.5%;
+    }
+
+    &::before {
+      left: unset;
+      top: 92px;
+      right: 62px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      left: unset;
+      top: 80px;
+      right: 92px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--fat::after {
+      left: unset;
+      top: 133px;
+      right: 28px;
+
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .fit-programs__item-title {
+    margin: 0;
+    padding-top: 24px;
+
+    .font (36px, 37px, 400);
+  }
+
+  .fit-programs__item-text {
+    min-height: 96px;
+    padding-top: 25px;
+    padding-bottom: 41px;
+
+    .font (16px, 24px, 400);
+
+    border: none;
+  }
+
+  .fit-programs__link-text {
+    padding-right: 58px;
+    .font (20px, 20px, 400);
+  }
 }

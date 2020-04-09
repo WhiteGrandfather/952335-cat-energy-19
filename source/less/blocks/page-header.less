@@ -1,12 +1,32 @@
+.page-header--index {
+  padding-bottom: 1px;
+}
 .page-header__row {
   display: flex;
   justify-content: space-between;
-
-  width: 100%;
-  .margin-center;
 }
 
 .page-header__logo {
   padding-top: 10px;
   padding-left: 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .page-header__logo {
+    padding: 0;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
 }

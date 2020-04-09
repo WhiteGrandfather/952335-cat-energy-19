@@ -1,10 +1,14 @@
 .banner {
   width: 100%;
   padding-top: 13px;
+
+  background-image: url("../img/index-can-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 67px;
 }
 
 .banner__title {
-  padding-bottom: 17px;
+  padding-bottom: 291px;
 
   .font (14px, 14px, 400);
   color: @white-font-color;
@@ -16,4 +20,49 @@
   display: block;
   .margin-center;
   padding-bottom: 4px;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    min-height: 690px;
+    .margin-center;
+    padding-top: 23px;
+    padding-left: 12.6%;
+    box-sizing: border-box;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 81px;
+    background-size: 709px 609px;
+  }
+
+  .banner__title {
+    padding-bottom: 33px;
+
+    .font (20px, 20px, 400);
+    color: @big-font-color;
+    text-align: left;
+  }
+
+  .banner__image {
+    display: none;
+    position: absolute;
+    content: "";
+    top: 80px;
+    left: 44.35%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    width: 709px;
+    height: 609px;
+  }
+
+  .banner__button {
+    width: unset;
+    min-width: 246px;
+    min-height: 52px;
+
+    .font (20px, 20px, 400);
+
+  }
 }
