@@ -30,8 +30,8 @@
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item-link">
-                <span class="site-list__item-text site-list__item-text--active">Каталог продукции</span>
+              <a class="site-list__item-link site-list__item-link--active">
+                <span class="site-list__item-text">Каталог продукции</span>
               </a>
             </li>
             <li class="site-list__item site-list__item--last">
@@ -79,7 +79,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/chicken-big-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
-                <img class="goods__image" src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy pro 1000 г" >
+                <img class="goods__image goods__image--big" src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy pro 1000 г" >
               </picture>
               <div class="goods__properties-wrapper">
                 <h2 class="goods__title">Cat energy pro 1000 г</h2>
@@ -133,7 +133,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/fish-big-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
-                <img class="goods__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy pro 1000 г" >
+                <img class="goods__image goods__image--big" src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy pro 1000 г" >
               </picture>
               <div class="goods__properties-wrapper">
                 <h2 class="goods__title">Cat energy pro 1000 г</h2>
@@ -187,7 +187,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/buckwheat-big-desktop@1x.png">
                   <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
-                  <img class="goods__image" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy slim 1000 г" >
+                  <img class="goods__image goods__image--big" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat energy slim 1000 г" >
               </picture>
               <div class="goods__properties-wrapper">
                 <h2 class="goods__title">Cat energy slim 1000 г</h2>
@@ -238,38 +238,44 @@
           </li>
           <li class="goods__item goods__item--show-all">
             <div class="goods__show-all">
-              <h2 class="goods__show-all-title">Показать еще 100500 товаров</h2>
-              <p class="goods__show-all-text">На самом деле вкусов гораздо больше!</p>
+              <h2 class="goods__show-all-title">Показать еще
+                <span>100500 товаров</span>
+              </h2>
+              <p class="goods__show-all-text">На самом деле вкусов
+                <span>гораздо больше!</span>
+              </p>
               <button class="goods__show-all-button button" type="button">Показать все</button>
             </div>
           </li>
         </ul>
       </section>
       <section class="page-main__additional-goods additional-goods">
-        <h2 class="additional-goods__title">Дополнительные товары</h2>
+        <div class="additional-goods__title-wrapper">
+          <h2 class="additional-goods__title">Дополнительные товары</h2>
+        </div>
         <div class="additional-goods__container">
           <ul class="additional-goods__list">
             <li class="additional-goods__item">
               <h3 class="additional-goods__item-title">Сахарозаменитель</h3>
-              <p class="additional-goods__item-text">1 упаковка (100 г)</p>
+              <p class="additional-goods__item-text  additional-goods__item-text--first">1 упаковка (100 г)</p>
               <p class="additional-goods__item-text">200 Р.</p>
               <button class="additional-goods__button button" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
               <h3 class="additional-goods__item-title">Питьевая вода</h3>
-              <p class="additional-goods__item-text">5 литров</p>
+              <p class="additional-goods__item-text  additional-goods__item-text--first">5 литров</p>
               <p class="additional-goods__item-text">50 Р.</p>
               <button class="additional-goods__button button" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
               <h3 class="additional-goods__item-title">Молоко</h3>
-              <p class="additional-goods__item-text">1 литр</p>
+              <p class="additional-goods__item-text  additional-goods__item-text--first">1 литр</p>
               <p class="additional-goods__item-text">100 Р.</p>
               <button class="additional-goods__button button" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
               <h3 class="additional-goods__item-title">Витамины</h3>
-              <p class="additional-goods__item-text">1 упаковка (30 г)</p>
+              <p class="additional-goods__item-text  additional-goods__item-text--first">1 упаковка (30 г)</p>
               <p class="additional-goods__item-text">300 Р.</p>
               <button class="additional-goods__button button" type="button">Заказать</button>
             </li>
@@ -289,7 +295,9 @@
           Приглашаем
           <span class="invite-dealers__title-text">к сотрудничеству дилеров!</span>
         </h2>
-        <p class="invite-dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="invite-dealers__address">ул. Большая Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span>
+        </p>
       </section>
       <section class="page-main__map map">
         <div class="map__pin"></div>

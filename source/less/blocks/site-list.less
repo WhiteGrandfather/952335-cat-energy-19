@@ -16,9 +16,7 @@
   color: @big-font-color;
   text-decoration: none;
   text-transform: uppercase;
-}
 
-.site-list__item-link {
   &:hover {
     color: rgba(017, 017, 017, 0.6);
   }
@@ -65,10 +63,10 @@
       position: relative;
     }
 
-    &--active:after {
+    &--active::after {
       position: absolute;
       content: "";
-      bottom: -10px;
+      bottom: 7px;
       left: 0;
 
       width: 100%;

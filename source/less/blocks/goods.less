@@ -5,8 +5,6 @@
 .goods__item {
   .side-paddings;
   padding-bottom: 24px;
-
-  border-bottom: 1px solid #ededed;
 }
 
 .goods__item-container {
@@ -114,5 +112,114 @@
 
   &:active {
     color: rgba(068, 068, 068, 0.3);
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .goods__item {
+    border-bottom: 1px solid #ededed;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goods__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 0 30px;
+  }
+
+  .goods__item {
+    width: 249px;
+    padding-top: 58px;
+    padding-left: 38px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+
+    background-image: linear-gradient(to bottom, @white 141px, @backgound-gray 141px);
+
+    &--show-all {
+      width: 324px;
+      padding: 0;
+      padding-top: 140px;
+    }
+  }
+
+  .goods__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .goods__image {
+    width: 324px;
+    height: 172px;
+    padding-top: 36px;
+    padding-bottom: 16px;
+
+    &--big {
+      padding-top: 0;
+      height: 208px;
+    }
+  }
+
+  .goods__title {
+    display: block;
+
+    width: 60%;
+    .margin-center;
+    padding-bottom: 19px;
+
+    .font (20px, 20px, 400);
+    text-align: center;
+  }
+
+  .goods__properties-wrapper {
+    padding-bottom: 33px;
+  }
+
+  .goods__properties-line {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .goods__properties-item {
+    padding: 8px 0;
+    padding-bottom: 7px;
+
+    .font (16px, 16px, 400);
+  }
+
+  .goods__show-all {
+    width: 100%;
+    padding-top: 163px;
+    padding-left: 38px;
+    padding-right: 37px;
+    padding-bottom: 39px;
+    background-color: @white;
+    box-sizing: border-box;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  .goods__show-all-title {
+    padding-bottom: 27px;
+
+    .font (20px, 20px, 400);
+  }
+
+  .goods__show-all-title span {
+    display: block;
+  }
+
+  .goods__show-all-text {
+    padding-bottom: 86px;
+
+    .font (16px, auto, 400);
+  }
+
+  .goods__show-all-text span {
+    display: block;
+    padding-top: 3px;
   }
 }
