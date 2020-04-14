@@ -4,7 +4,8 @@
 
   min-height: 112px;
   .margin-center;
-  padding: 0 20px;
+  padding-top: 2px;
+  .side-paddings;
 
   background-color: #f2f2f2;
 
@@ -31,4 +32,44 @@
   .font-arial;
   .font (14px, 20px, 400);
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .invite-dealers {
+    justify-content: space-between;
+
+    min-height: 200px;
+    padding-top: 0;
+    padding-left: 9.2%;
+    padding-right: 9.2%;
+  }
+
+  .invite-dealers__title {
+    width: 30%;
+    padding-top: 4px;
+
+    .font(20px, 25px, 400);
+  }
+
+  .invite-dealers__address {
+    align-self: flex-start;
+
+    width: 30%;
+    padding-top: 47px;
+
+    .font (16px, 20px, 400);
+    text-align: right;
+  }
+
+  .invite-dealers__address span {
+    display: block;
+
+    padding-top: 20px;
+  }
+
+  .invite-dealers__address--index span {
+    display: block;
+
+    padding-top: 20px;
+  }
 }
