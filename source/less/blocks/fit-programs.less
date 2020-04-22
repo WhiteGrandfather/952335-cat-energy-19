@@ -191,3 +191,55 @@
     .font (20px, 20px, 400);
   }
 }
+
+@media (min-width: @desktop-width) {
+  .fit-programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .fit-programs__item {
+    width: 466px;
+    padding-right: 52px;
+
+    &::before {
+      top: 47px;
+      right: unset;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: 41px;
+      left: 66px;
+      right: unset;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--fat::after {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .fit-programs__item-title {
+    width: auto;
+    padding-left: 162px;
+  }
+
+  .fit-programs__item-text {
+    padding-top: 74px;
+    padding-bottom: 0;
+  }
+
+  .fit-programs__item-link {
+    padding-top: 8px;
+  }
+}

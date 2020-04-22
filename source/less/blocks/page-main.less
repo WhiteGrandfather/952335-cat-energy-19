@@ -28,52 +28,11 @@
   .margin-center;
 }
 
-.page-main__present {
-  min-height: 246px;
-  padding-top: 40px;
-  .side-paddings;
-  padding-bottom: 38px;
-
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
-
-.page-main__present-image {
-  display: block;
-
-  .margin-center;
-  padding-top: 25px;
-
-  fill: @white;
-}
-
-.page-main__present-text {
-  width: 165px;
-  .margin-center;
-  padding-top: 48px;
-
-  .font-arial;
-  .font (16px, 16px, 400);
-  color: @white;
-  text-align: center;
-}
-
-.page-main__present-text-br {
-  display: block;
-  padding-top: 4px;
-}
-
 @media (max-width: @mobile-width) {
   .page-main--index {
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-position-x: center;
     background-repeat: no-repeat;
-  }
-
-  .page-main__title {
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
   }
 
   .page-main__title--index {
@@ -101,31 +60,62 @@
   .page-main__container {
     padding: 0 30px;
   }
+}
 
-  .page-main__present {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: @desktop-width) {
+  .page-main {
+    position: relative;
+  }
 
-    max-width: 526px;
-    min-height: 196px;
+  .page-main--index::before {
+    position: absolute;
+    content: "";
+    top: -170px;
+    right: 0;
+    z-index: -1;
+
+    width: 50%;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .page-main__container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .page-main__title {
+    width: 1220px;
     .margin-center;
-    padding: 40px 121px;
+    padding-top: 19px;
+    padding-bottom: 21px;
 
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    &--index {
+      width: 34%;
+      padding-top: 52px;
+      padding-left: 120px;
+      padding-bottom: 0;
+      margin-left: 0;
+    }
+
+    &--form {
+      padding-bottom: 24px;
+    }
   }
 
-  .page-main__present-image {
-    margin: 0;
+  .page-main__wrapper {
+    max-width: 1300px;
+    .margin-center;
+
+    &--fit-example {
+      background-image:
+        linear-gradient(to top, transparent 463px, @white 463px),
+        linear-gradient(to right, #f2f2f2 70%, #eaeaea 70%);
+    }
   }
 
-  .page-main__present-text {
-    display: block;
-
-    width: auto;
-    min-width: 193px;
-    margin: 0;
-    padding-top: 34px;
-
-    text-align: left;
+  .page-main__dealers-map-wrapper {
+    position: relative;
   }
 }

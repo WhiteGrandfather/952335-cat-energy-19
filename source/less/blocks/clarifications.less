@@ -106,18 +106,46 @@
   .clarifications__number {
     position: absolute;
     content: "";
-    top: -290px;
+    top: -8px;
     left: 56%;
     transform: translateX(-50%);
     z-index: -1;
 
     display: block;
+    margin: 0;
 
     .font (281px, 281px, 400);
     color: #f2f2f2;
 
     &--first {
       left: 58%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .clarifications {
+    padding-top: 43px;
+  }
+
+  .clarifications__title {
+    padding-bottom: 19px;
+  }
+
+  .clarifications__item {
+    width: 245px;
+    padding-bottom: 50px;
+  }
+
+  .clarifications__item-text {
+    width: 100%;
+  }
+
+  .clarifications__number {
+    left: 73.5%;
+
+    &--first {
+      left: 76.6%;
     }
   }
 }
