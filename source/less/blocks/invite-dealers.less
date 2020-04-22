@@ -73,3 +73,27 @@
     padding-top: 20px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .invite-dealers {
+    position: absolute;
+    content: "";
+    top: 97px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-107%);
+
+    width: 420px;
+    padding: 0 75px;
+  }
+
+  .invite-dealers__title {
+    width: 40%;
+  }
+
+  .invite-dealers__address {
+    width: 40%;
+
+    text-align: left;
+  }
+}

@@ -24,6 +24,8 @@
 
 @media (min-width: @tablet-width) {
   .banner {
+    position: relative;
+
     min-height: 690px;
     .margin-center;
     padding-top: 23px;
@@ -59,9 +61,36 @@
 
   .banner__button {
     width: unset;
-    min-width: 246px;
+    min-width: 245px;
     min-height: 52px;
 
     .font (20px, 20px, 400);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    position: relative;
+
+    min-height: 434px;
+    padding-top: 24px;
+    padding-left: 80px;
+    background-image: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 552px;
+      height: 499px;
+      top: -200px;
+      right: 218px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+    }
+  }
+
+  .banner__title {
+    width: 40%;
+    padding-bottom: 37px;
   }
 }

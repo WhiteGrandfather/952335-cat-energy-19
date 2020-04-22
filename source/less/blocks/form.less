@@ -21,6 +21,8 @@
 }
 
 .form__list-item {
+  position: relative;
+
   padding: 20px;
   padding-bottom: 16px;
 
@@ -34,6 +36,31 @@
   &--comments,
   &--additionally {
     padding-top: 0;
+  }
+
+  &--wide::after {
+    position: absolute;
+    content: "";
+    top: 43px;
+    right: 0;
+    z-index: -1;
+
+    width: 90%;
+    height: 3px;
+
+    background-color: @green;
+  }
+
+  &--comments::after {
+    top: 20px;
+
+    width: 160px;
+  }
+
+  &--additionally::after {
+    top: 25px;
+
+    width: 136px;
   }
 }
 
@@ -50,22 +77,23 @@
 }
 
 .form__group-title {
-  position: relative;
-
-  width: 100%;
+  width: auto;
   padding-top: 8px;
   padding-left: 0;
-  padding-right: 85px;
   padding-bottom: 26px;
 
   .font (24px, 24px, 400);
   text-transform: none;
 
   box-sizing: border-box;
+  background-color: @white;
+
+  &--contacts {
+    width: 71.7%;
+  }
 
   &--comments {
     padding-top: 5px;
-    padding-right: 145px;
     padding-bottom: 35px;
   }
 
@@ -73,34 +101,11 @@
     padding-top: 11px;
     padding-bottom: 23px;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 22px;
-    right: -20px;
-
-    width: 98px;
-    height: 3px;
-
-    background-color: @green;
-  }
-
-  &--comments::after {
-    top: 19px;
-
-    width: 160px;
-  }
-
-  &--additionally::after {
-    top: 24px;
-
-    width: 136px;
-  }
 }
 
 .form__item {
   position: relative;
+
   display: flex;
 
   padding-top: 7px;
@@ -378,11 +383,30 @@
 
     &--contacts {
       padding-top: 60px;
+      padding-left: 30px;
       padding-bottom: 7px;
     }
 
     &--comments {
+      padding-left: 30px;
       padding-bottom: 50px;
+    }
+
+    &--additionally {
+      padding-left: 30px;
+    }
+
+    &::after {
+      width: 100%;
+      top: 97px;
+    }
+
+    &--comments::after {
+      top: 67px;
+    }
+
+    &--additionally::after {
+      top: 35px;
     }
   }
 
@@ -393,14 +417,6 @@
       padding-bottom: 15px;
 
       border: 1px solid #e6e6e6;
-    }
-
-    &--contacts,
-    &--comments,
-    &--additionally {
-      padding-left: 30px;
-
-      border-top: 3px solid @green;
     }
 
     &--comments,
@@ -561,5 +577,137 @@
 
     text-align: left;
     .font (16px, 16px, 400);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-bottom: 54px;
+  }
+
+  .form__title {
+    width: 1220px;
+    .margin-center;
+    padding: 0 40px;
+  }
+
+  .form__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding-top: 50px;
+
+    &--contacts {
+      padding-top: 30px;
+    }
+
+    &--additionally {
+      padding: 0;
+      padding-top: 4px;
+      padding-bottom: 11px;
+    }
+  }
+
+  .form__list-item {
+    width: 570px;
+    padding: 0;
+
+    &--wide {
+      width: 100%;
+    }
+
+    &--name {
+      padding-right: 80px;
+    }
+
+    &--contacts {
+      padding-top: 35px;
+      padding-bottom: 22px;
+    }
+
+    &--contacts::after {
+      top: 70px;
+    }
+  }
+
+  .form__item-icon {
+    top: 27px;
+    right: 60px;
+  }
+
+  .form__group {
+    max-width: 1300px;
+    .margin-center;
+
+    &--name {
+      padding: 0;
+    }
+
+    &--comments {
+      max-width: 1260px;
+      padding-right: 40px;
+      padding-bottom: 52px;
+    }
+
+    &--additionally {
+      padding-right: 0;
+    }
+  }
+
+  .form__group-title {
+    &--contacts {
+      padding-top: 13px;
+    }
+  }
+
+  .form__item {
+    &--name {
+      display: flex;
+
+      padding: 0;
+      padding-bottom: 20px;
+    }
+
+    &--email,
+    &--phone {
+      width: 570px;
+      padding: 0 40px;
+    }
+
+    &--additionally {
+      width: unset;
+      min-width: 205px;
+      padding-left: 80px;
+      padding-right: 40px;
+    }
+  }
+
+  .form__item-label--checkbox {
+    padding-left: 18px;
+
+    &::before {
+      left: 40px;
+    }
+  }
+
+  .form__item-tick {
+    left: 50px;
+  }
+
+  .form__button-container {
+    justify-content: flex-start;
+
+    width: 1220px;
+    .margin-center;
+    padding: 28px 40px;
+  }
+
+  .form__button {
+    width: 570px;
+  }
+
+  .form__notes {
+    padding-left: 81px;
   }
 }
