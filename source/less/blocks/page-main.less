@@ -38,10 +38,17 @@
   .page-main__title--index {
     max-width: 320px;
   }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .page-main--index {
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-size: 320px, auto;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-main--catalog .page-main__title {
+  .page-main__title--catalog {
     padding-bottom: 25px;
   }
 
@@ -88,8 +95,8 @@
   .page-main__title {
     width: 1220px;
     .margin-center;
-    padding-top: 19px;
-    padding-bottom: 21px;
+    padding-top: 18px;
+    padding-bottom: 22px;
 
     &--index {
       width: 34%;
