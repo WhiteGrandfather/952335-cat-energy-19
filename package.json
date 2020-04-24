@@ -33,8 +33,7 @@
     "sprite": "gulp sprite",
     "inlinehtml": "gulp html",
     "build": "gulp build",
-    "start": "gulp start",
-    "css-copy": "gulp css-copy"
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",

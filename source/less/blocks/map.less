@@ -17,6 +17,10 @@
   }
 }
 
+.map__script-container {
+  display: none;
+}
+
 .map__pin {
   position: absolute;
   content: "";
@@ -55,6 +59,10 @@
     width: 113px;
     height: 106px;
   }
+
+  .map__script-container {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -72,6 +80,7 @@
   }
 
   .map__pin {
+    display: none;
     top: 151px;
     transform: translateX(251.5%);
   }

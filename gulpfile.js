@@ -21,10 +21,12 @@ var pipeline = require("readable-stream").pipeline;
 gulp.task("compress-js", function () {
   return pipeline(
         gulp.src("source/js/*.js"),
+        sourcemap.init(),
         uglify(),
         rename(function (path) {
           path.basename += "-min";
         }),
+        sourcemap.write("."),
         gulp.dest("build/js")
   );
 });
@@ -49,8 +51,8 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/css/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/manifest.json"
   ], {
   base: "source"
   })
@@ -100,7 +102,7 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
+    .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
 });
@@ -114,7 +116,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("compress-js", "refresh"));
   gulp.watch("source/*.html", gulp.series("minify", "refresh"));
