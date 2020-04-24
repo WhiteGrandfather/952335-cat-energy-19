@@ -239,22 +239,19 @@
   }
 
   .fit-example__image-container {
+    display: flex;
+
     box-sizing: border-box;
     position: relative;
 
     width: 768px;
+    max-width: 100%;
+    min-width: 1%;
     height: 660px;
     .margin-center;
   }
 
   .fit-example__image {
-    box-sizing: border-box;
-    position: absolute;
-    content: "";
-    top: 1px;
-    left: 0;
-    z-index: 20;
-
     width: 50%;
     height: 659px;
     margin-right: auto;
@@ -266,15 +263,13 @@
     background-position-x: 46px, 0;
 
     &--after {
-      left: 0;
-      width: 100%;
-      z-index: 10;
+      width: 50%;
       display: block;
 
       background-image:
         url("../img/after-tablet@1x.png"),
         linear-gradient(to bottom, @white 169px, #eaeaea 169px);
-      background-position-x: 46px, 0;
+      background-position-x: -338px, 0;
     }
   }
 
@@ -296,10 +291,10 @@
   .fit-example__controls {
     position: absolute;
     content: "";
-    top: 547px;
+    top: 546px;
     left: 50%;
     transform: translateX(-50%);
-
+    z-index: 20;
 
     width: 80%;
     padding-top: 11px;
@@ -445,12 +440,14 @@
       url("../img/before-tablet@1x.png"),
       linear-gradient(to bottom, @white 211px, #f2f2f2 211px);
     background-position-y: 20px, 0;
-    background-position-x: -40px, 0;
+    background-position-x: -39px, 0;
 
     &--after {
       background-image:
         url("../img/after-tablet@1x.png"),
         linear-gradient(to bottom, @white 211px, #eaeaea 211px);
+      background-position-x: 0px, 0;
+      background-position-x: -365px, 0;
     }
   }
 
