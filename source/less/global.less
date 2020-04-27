@@ -3,6 +3,7 @@
   src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,12 +11,14 @@
   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
   margin: 0;
   padding: 0;
   .margin-center;
+  min-width: 320px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -26,3 +29,25 @@ body {
 img {
   vertical-align: bottom;
 }
+
+
+// @media (min-width: @desktop-width) {
+//   body {
+//     background-image: linear-gradient(to bottom, transparent 696px, @white 696px), linear-gradient(to right, @white 50%, #64a83b 50%);
+//     background-repeat: no-repeat;
+//     background-position-x: left, 90%;
+
+//     &::before {
+//       position: absolute;
+//       content: "";
+//       top: 0;
+//       right: 0;
+//       z-index: -1;
+
+//       width: 50%;
+//       height: 696px;
+//       background-image: url("../img/index-background-desktop@1x.jpg");
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }
