@@ -75,17 +75,24 @@
   text-align: center;
 }
 
+.fit-example__image-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  height: 314px;
+}
+
 .fit-example__image {
   width: 320px;
   height: 240px;
-  .margin-center;
 
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
 
   &--after {
-    display: none;
+    width: 0;
     background-image: url("../img/after-mobile@1x.png");
   }
 }
@@ -102,11 +109,15 @@
 }
 
 .fit-example__controls {
+  position: absolute;
+  content: "";
+  top: 240px;
+  left: 50.5%;
+  transform: translateX(-50%);
+
   display: flex;
   justify-content: space-between;
-
   width: 62%;
-
   .margin-center;
   padding-top: 33px;
   padding-bottom: 18px;
